@@ -1,0 +1,5 @@
+
+"NSLocationWhenInUseUsageDescription" = "When in use iOS 10"; // iOS 10
+"NSLocationAlwaysUsageDescription" = "Always iOS 10"; // iOS 10
+"NSLocationWhenInUseUsageDescription" = "When in use iOS 11"; // iOS 11
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Always iOS 11"; // iOS 11
