@@ -84,6 +84,7 @@
 		4B0FE70A1F9CA165008A3513 = {
 			isa = PBXGroup;
 			children = (
+				4BEE8DD71F9F683800671FFB /* EagleBit.swift */,
 				4B0FE7151F9CA165008A3513 /* Eaglebit */,
 				4BE77D591FA9CCB200A44E15 /* Eaglebit */,
 				4B0FE7141F9CA165008A3513 /* Products */,
@@ -106,7 +107,6 @@
 				4B0FE7161F9CA165008A3513 /* AppDelegate.swift */,
 				4B0FE7221F9CA165008A3513 /* Info.plist */,
 				4B0F758C1F9D07E500BD1F3D /* InfoPlist.strings */,
-				4BA3DAB91F9CA72A0096C540 /* Eaglebit */,
 				4BA3DABC1F9CEA100096C540 /* Model */,
 				4BA3DAB81F9CA7220096C540 /* Resources */,
 				4B0FE72F1F9CA703008A3513 /* Controllers */,
@@ -137,14 +137,6 @@
 				4B0FE71D1F9CA165008A3513 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		4BA3DAB91F9CA72A0096C540 /* Eaglebit */ = {
-			isa = PBXGroup;
-			children = (
-				4BEE8DD71F9F683800671FFB /* EagleBit.swift */,
-			);
-			path = Eaglebit;
 			sourceTree = "<group>";
 		};
 		4BA3DABC1F9CEA100096C540 /* Model */ = {
