@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="https://raw.github.com/mhergon/EagleBit/assets/eaglebit_logo.png" alt="EagleBit" title="Logo" height=300>
+<img src="https://github.com/mhergon/EagleBit/raw/master/assets/eaglebit_logo.png" alt="EagleBit" title="Logo" height=300>
 </p>
 
 ![cocoapods](https://img.shields.io/cocoapods/at/EagleBit.svg)
