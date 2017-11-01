@@ -8,8 +8,7 @@
 ![stars](https://img.shields.io/github/stars/mhergon/EagleBit.svg)
 ![license](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)
 
-EagleBit is the most efficient way to get locations indefinitely without compromise battery life.
-Is able to stop location updates when is not necessary and restart when the user moves again.
+EagleBit is the most efficient way to get locations indefinitely without compromise battery life.<br>Is able to stop location updates when is not necessary and restart when the user moves again.
 
 ## Capabilities
 
