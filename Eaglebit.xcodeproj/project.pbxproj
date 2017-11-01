@@ -15,8 +15,8 @@
 		4B0FE72E1F9CA684008A3513 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0FE72D1F9CA684008A3513 /* MapKit.framework */; };
 		4BA3DABE1F9CEA1C0096C540 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3DABD1F9CEA1C0096C540 /* Location.swift */; };
 		4BE77D5C1FA9CCB200A44E15 /* Eaglebit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE77D5A1FA9CCB200A44E15 /* Eaglebit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BE77D5F1FA9CCB200A44E15 /* Eaglebit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */; };
-		4BE77D601FA9CCB200A44E15 /* Eaglebit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BE77D5F1FA9CCB200A44E15 /* EagleBit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* EagleBit.framework */; };
+		4BE77D601FA9CCB200A44E15 /* EagleBit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* EagleBit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BE77D651FA9CCDF00A44E15 /* EagleBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE8DD71F9F683800671FFB /* EagleBit.swift */; };
 		4BEE8DD81F9F683800671FFB /* EagleBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE8DD71F9F683800671FFB /* EagleBit.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BE77D601FA9CCB200A44E15 /* Eaglebit.framework in Embed Frameworks */,
+				4BE77D601FA9CCB200A44E15 /* EagleBit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,7 +55,7 @@
 		4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4B0FE72D1F9CA684008A3513 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4BA3DABD1F9CEA1C0096C540 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eaglebit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE77D581FA9CCB200A44E15 /* EagleBit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EagleBit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE77D5A1FA9CCB200A44E15 /* Eaglebit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eaglebit.h; sourceTree = "<group>"; };
 		4BE77D5B1FA9CCB200A44E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEE8DD71F9F683800671FFB /* EagleBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleBit.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0FE72E1F9CA684008A3513 /* MapKit.framework in Frameworks */,
-				4BE77D5F1FA9CCB200A44E15 /* Eaglebit.framework in Frameworks */,
+				4BE77D5F1FA9CCB200A44E15 /* EagleBit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4B0FE7131F9CA165008A3513 /* Eaglebit Example.app */,
-				4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */,
+				4BE77D581FA9CCB200A44E15 /* EagleBit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,9 +189,9 @@
 			productReference = 4B0FE7131F9CA165008A3513 /* Eaglebit Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4BE77D571FA9CCB200A44E15 /* Eaglebit */ = {
+		4BE77D571FA9CCB200A44E15 /* EagleBit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "Eaglebit" */;
+			buildConfigurationList = 4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "EagleBit" */;
 			buildPhases = (
 				4BE77D531FA9CCB200A44E15 /* Sources */,
 				4BE77D541FA9CCB200A44E15 /* Frameworks */,
@@ -202,9 +202,9 @@
 			);
 			dependencies = (
 			);
-			name = Eaglebit;
+			name = EagleBit;
 			productName = Eaglebit;
-			productReference = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */;
+			productReference = 4BE77D581FA9CCB200A44E15 /* EagleBit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -249,7 +249,7 @@
 			projectRoot = "";
 			targets = (
 				4B0FE7121F9CA165008A3513 /* Eaglebit Example */,
-				4BE77D571FA9CCB200A44E15 /* Eaglebit */,
+				4BE77D571FA9CCB200A44E15 /* EagleBit */,
 			);
 		};
 /* End PBXProject section */
@@ -299,7 +299,7 @@
 /* Begin PBXTargetDependency section */
 		4BE77D5E1FA9CCB200A44E15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4BE77D571FA9CCB200A44E15 /* Eaglebit */;
+			target = 4BE77D571FA9CCB200A44E15 /* EagleBit */;
 			targetProxy = 4BE77D5D1FA9CCB200A44E15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -513,7 +513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "Eaglebit" */ = {
+		4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "EagleBit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BE77D621FA9CCB200A44E15 /* Debug */,

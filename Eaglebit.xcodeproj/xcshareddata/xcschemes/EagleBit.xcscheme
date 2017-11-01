@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4BE77D571FA9CCB200A44E15"
-               BuildableName = "Eaglebit.framework"
-               BlueprintName = "Eaglebit"
+               BuildableName = "EagleBit.framework"
+               BlueprintName = "EagleBit"
                ReferencedContainer = "container:Eaglebit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4BE77D571FA9CCB200A44E15"
-            BuildableName = "Eaglebit.framework"
-            BlueprintName = "Eaglebit"
+            BuildableName = "EagleBit.framework"
+            BlueprintName = "EagleBit"
             ReferencedContainer = "container:Eaglebit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4BE77D571FA9CCB200A44E15"
-            BuildableName = "Eaglebit.framework"
-            BlueprintName = "Eaglebit"
+            BuildableName = "EagleBit.framework"
+            BlueprintName = "EagleBit"
             ReferencedContainer = "container:Eaglebit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
