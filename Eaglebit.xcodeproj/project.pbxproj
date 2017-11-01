@@ -7,20 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B03A7091F9DC808005E0EDD /* Barcelona route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4B03A7081F9DC808005E0EDD /* Barcelona route.gpx */; };
 		4B0F758D1F9D07E500BD1F3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F758C1F9D07E500BD1F3D /* InfoPlist.strings */; };
 		4B0FE7171F9CA165008A3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FE7161F9CA165008A3513 /* AppDelegate.swift */; };
 		4B0FE71E1F9CA165008A3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FE71D1F9CA165008A3513 /* Assets.xcassets */; };
 		4B0FE72A1F9CA1CE008A3513 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0FE7281F9CA1CE008A3513 /* MainViewController.xib */; };
 		4B0FE72B1F9CA1CE008A3513 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */; };
 		4B0FE72E1F9CA684008A3513 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0FE72D1F9CA684008A3513 /* MapKit.framework */; };
-		4B58B1651FA0D04F00874556 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58B1641FA0D04F00874556 /* Extensions.swift */; };
 		4BA3DABE1F9CEA1C0096C540 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3DABD1F9CEA1C0096C540 /* Location.swift */; };
 		4BEE8DD81F9F683800671FFB /* Eaglebit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE8DD71F9F683800671FFB /* Eaglebit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B03A7081F9DC808005E0EDD /* Barcelona route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Barcelona route.gpx"; sourceTree = "<group>"; };
 		4B0F758C1F9D07E500BD1F3D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		4B0FE7131F9CA165008A3513 /* Eaglebit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eaglebit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0FE7161F9CA165008A3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +26,6 @@
 		4B0FE7281F9CA1CE008A3513 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4B0FE72D1F9CA684008A3513 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4B58B1641FA0D04F00874556 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4BA3DABD1F9CEA1C0096C540 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4BEE8DD71F9F683800671FFB /* Eaglebit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eaglebit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +62,6 @@
 		4B0FE7151F9CA165008A3513 /* Eaglebit */ = {
 			isa = PBXGroup;
 			children = (
-				4B03A7081F9DC808005E0EDD /* Barcelona route.gpx */,
 				4B0FE7161F9CA165008A3513 /* AppDelegate.swift */,
 				4B0FE7221F9CA165008A3513 /* Info.plist */,
 				4B0F758C1F9D07E500BD1F3D /* InfoPlist.strings */,
@@ -91,7 +86,6 @@
 			children = (
 				4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */,
 				4B0FE7281F9CA1CE008A3513 /* MainViewController.xib */,
-				4B58B1641FA0D04F00874556 /* Extensions.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,7 +183,6 @@
 			files = (
 				4B0FE71E1F9CA165008A3513 /* Assets.xcassets in Resources */,
 				4B0F758D1F9D07E500BD1F3D /* InfoPlist.strings in Resources */,
-				4B03A7091F9DC808005E0EDD /* Barcelona route.gpx in Resources */,
 				4B0FE72A1F9CA1CE008A3513 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B58B1651FA0D04F00874556 /* Extensions.swift in Sources */,
 				4B0FE7171F9CA165008A3513 /* AppDelegate.swift in Sources */,
 				4BEE8DD81F9F683800671FFB /* Eaglebit.swift in Sources */,
 				4BA3DABE1F9CEA1C0096C540 /* Location.swift in Sources */,
@@ -327,7 +319,7 @@
 				DEVELOPMENT_TEAM = E6L68FW2WH;
 				INFOPLIST_FILE = Eaglebit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,7 +334,7 @@
 				DEVELOPMENT_TEAM = E6L68FW2WH;
 				INFOPLIST_FILE = Eaglebit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

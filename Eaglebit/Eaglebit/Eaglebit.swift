@@ -6,7 +6,6 @@
 //  Copyright © 2017 mhergon. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
 
 /// Level authorization.
@@ -46,9 +45,6 @@ class Eaglebit: NSObject {
         }
     }
     
-    // FIXME: Delete
-    var activityType = ""
-    
     // MARK: - Private properties
     fileprivate var authorizationBlocks = [EagleAuthorizationStatus?]()
     fileprivate var locationBlocks = [EagleLocation]()
@@ -62,8 +58,11 @@ class Eaglebit: NSObject {
     fileprivate let runningMaxSpeed = 7.5
     fileprivate let automotiveMaxSpeed = 69.44
     
-    /// Region for resumen location updates (minimum of 100 meters( is recommende)
-    fileprivate let resumeRegionRadius = 100.0
+    /// Region radius
+    fileprivate enum RegionRadius: Double {
+        case tiny = 40.0
+        case big = 80.0
+    }
     
     /// Core config
     fileprivate lazy var locationManager: CLLocationManager = {
@@ -72,8 +71,8 @@ class Eaglebit: NSObject {
         manager.distanceFilter = distanceFilter
         manager.allowsBackgroundLocationUpdates = isBackgroundLocationUpdatesAllowed()
         manager.pausesLocationUpdatesAutomatically = true
-        manager.activityType = .other
-        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        manager.startMonitoringSignificantLocationChanges()
         return manager
     }()
 
@@ -123,7 +122,7 @@ extension Eaglebit {
     func stationary(untilMoves: Bool = true) {
         
         /// Add resume region to restart when user moves
-        if untilMoves, let last = locationManager.location { addResumeRegion(over: last) }
+        if untilMoves, let last = locationManager.location { addResumeRegions(over: last) }
         
         /// Pause updating location
         locationManager.stopUpdatingLocation()
@@ -146,16 +145,17 @@ extension Eaglebit {
 
 }
 
-
 // MARK: - Private methods
 fileprivate extension Eaglebit {
     
-    /// Create region for resume paused location updates.
+    /// Create regions for resume paused location updates.
     ///
     /// - Parameter over: Last location
-    func addResumeRegion(over: CLLocation) {
+    func addResumeRegions(over: CLLocation) {
         
-        let region = CLCircularRegion(center: over.coordinate, radius: resumeRegionRadius, identifier: "eaglebit.region")
+        var region = CLCircularRegion(center: over.coordinate, radius: RegionRadius.tiny.rawValue, identifier: "eaglebit.region.tiny")
+        locationManager.startMonitoring(for: region)
+        region = CLCircularRegion(center: over.coordinate, radius: RegionRadius.big.rawValue, identifier: "eaglebit.region.big")
         locationManager.startMonitoring(for: region)
 
     }
@@ -178,46 +178,24 @@ fileprivate extension Eaglebit {
         
     }
 
-    /// Adjust precion & battery power
-    func adjustPrecisionAndBattery() {
+    /// Adjust activity type
+    func adjustActivityType(from location: CLLocation) {
 
         /// Retunr .other type if no speed
         guard let speed = locationManager.location?.speed else { return }
         
         switch speed {
-        case let s where s >= 0.0 && s <= minimumSpeed:
-            locationManager.activityType = .other
-            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-            
-            activityType = "unknown"
-            
-        case let s where s > minimumSpeed && s <= runningMaxSpeed:
+        case let s where s >= minimumSpeed && s <= runningMaxSpeed:
             locationManager.activityType = .fitness
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             
-            // FIXME: Delete
-            showNotification(message: "adjustPrecisionAndBattery: walking or running")
-            activityType = "walk"
-    
         case let s where s > runningMaxSpeed && s <= automotiveMaxSpeed:
             locationManager.activityType = .automotiveNavigation
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            
-            // FIXME: Delete
-            showNotification(message: "adjustPrecisionAndBattery: automotive")
-            activityType = "automotive"
             
         case let s where s > automotiveMaxSpeed:
             locationManager.activityType = .otherNavigation
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            
-            // FIXME: Delete
-            showNotification(message: "adjustPrecisionAndBattery: ludicrous")
-            activityType = "ludicrous"
             
         default:
             locationManager.activityType = .other
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             
         }
 
@@ -239,11 +217,13 @@ extension Eaglebit: CLLocationManagerDelegate {
     // MARK: - Location updates related
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        /// Send last location to all suscribers.
-        for block in locationBlocks { block(locations.last, nil) }
+        guard let last = locations.last else { return }
         
-        /// Adjust precion & activity type to save battery
-        adjustPrecisionAndBattery()
+        /// Send last location to all suscribers.
+        for block in locationBlocks { block(last, nil) }
+        
+        /// Adjust activity type
+        adjustActivityType(from: last)
         
     }
     
@@ -257,34 +237,23 @@ extension Eaglebit: CLLocationManagerDelegate {
     public func locationManagerDidPauseLocationUpdates(_ manager: CLLocationManager) {
         
         /// Create circular region for monitoring.
-        if let location = manager.location { addResumeRegion(over: location) }
-        
-        // FIXME: Delete
-        showNotification(message: "locationManagerDidPauseLocationUpdates")
-        
+        if let location = manager.location { addResumeRegions(over: location) }
+
     }
     
     public func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
-        
+
         /// Delete existing regions.
         deleteResumeRegion()
-
-        // FIXME: Delete
-        showNotification(message: "locationManagerDidResumeLocationUpdates")
         
     }
     
     // MARK: - Region monitoring related
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
-        /// Re-start location updates.
-        manager.startUpdatingLocation()
-        
-        // FIXME: Delete
-        showNotification(message: "didExitRegion")
+        /// Re-start location updates
+        locationManager.startUpdatingLocation()
         
     }
 
 }
-
-

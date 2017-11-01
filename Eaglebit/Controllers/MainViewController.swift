@@ -19,10 +19,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
-        
-        #if (arch(i386) || arch(x86_64)) && os(iOS)
-            mapView.isHidden = true
-        #endif
 
     }
     
@@ -40,37 +36,20 @@ class MainViewController: UIViewController {
     
     @objc func requestAlways() {
         
-        Eagle.authorize(level: .always) { (status) in
-            
-            switch status {
-            case .authorizedWhenInUse:
-                print("in use")
-            case .authorizedAlways:
-                print("always")
-            case .denied:
-                print("denied")
-            case .notDetermined:
-                print("not determined")
-            case .restricted:
-                print("restricted")
-            }
-            
+        var auth: EagleAuthorization = .inUse
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            auth = .always
         }
+        
+        Eagle.authorize(level: auth, status: nil)
         
     }
     
     @objc func startLocation() {
 
-        /// Start location updates
-        Eagle.fly { (location, error) in
-            
-            if let last = location {
-                
-                // Save
-                Location(from: last, activity: Eagle.activityType).save()
-                
-            }
-        }
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        delegate.startLocation()
         
     }
     
@@ -84,8 +63,7 @@ class MainViewController: UIViewController {
             
             let pin = MKPointAnnotation()
             pin.coordinate = CLLocationCoordinate2D(latitude: loc.latitude, longitude: loc.longitude)
-            //pin.title = DateFormatter.localizedString(from: loc.timeStamp, dateStyle: .short, timeStyle: .short) + "\n\(loc.speed) m/s" + "\n" + loc.activityType
-            pin.title = loc.activityType + "\n\(loc.speed) m/s"
+            pin.title = DateFormatter.localizedString(from: loc.timeStamp, dateStyle: .short, timeStyle: .short) + "\n\(loc.speed) m/s"
             annotations.append(pin)
             
         }

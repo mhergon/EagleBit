@@ -15,14 +15,12 @@ struct Location: Codable {
     var longitude = 0.0
     var speed = 0.0
     var timeStamp = Date()
-    var activityType = "default"
     
-    init(from location: CLLocation, activity: String) {
+    init(from location: CLLocation) {
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
         speed = location.speed
         timeStamp = location.timestamp
-        activityType = activity
     }
     
     func save() {

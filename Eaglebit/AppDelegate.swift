@@ -25,14 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         
         // Re-start location
-        if launchOptions?[UIApplicationLaunchOptionsKey.location] != nil {
-            main.startLocation()
-        }
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (accepted, error) in
-            
-        }
-        
+        startLocation()
+
         return true
         
     }
@@ -45,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
         
     }
 
@@ -61,6 +56,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func startLocation() {
+        
+        /// Start location updates
+        Eagle.fly { (location, error) in
+            
+            if let last = location {
+                
+                // Save location
+                Location(from: last).save()
+                
+            }
+        }
+        
     }
 
 }
