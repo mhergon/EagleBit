@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
             auth = .always
         }
         
-        Eagle.authorize(level: auth, status: nil)
+        Eagle.authorize(level: auth, status: nil)        
         
     }
     
