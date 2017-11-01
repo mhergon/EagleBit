@@ -14,12 +14,40 @@
 		4B0FE72B1F9CA1CE008A3513 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */; };
 		4B0FE72E1F9CA684008A3513 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0FE72D1F9CA684008A3513 /* MapKit.framework */; };
 		4BA3DABE1F9CEA1C0096C540 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3DABD1F9CEA1C0096C540 /* Location.swift */; };
+		4BE77D5C1FA9CCB200A44E15 /* Eaglebit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE77D5A1FA9CCB200A44E15 /* Eaglebit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BE77D5F1FA9CCB200A44E15 /* Eaglebit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */; };
+		4BE77D601FA9CCB200A44E15 /* Eaglebit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BE77D651FA9CCDF00A44E15 /* Eaglebit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE8DD71F9F683800671FFB /* Eaglebit.swift */; };
 		4BEE8DD81F9F683800671FFB /* Eaglebit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEE8DD71F9F683800671FFB /* Eaglebit.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4BE77D5D1FA9CCB200A44E15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B0FE70B1F9CA165008A3513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BE77D571FA9CCB200A44E15;
+			remoteInfo = Eaglebit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BE77D641FA9CCB200A44E15 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BE77D601FA9CCB200A44E15 /* Eaglebit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B0F758C1F9D07E500BD1F3D /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		4B0FE7131F9CA165008A3513 /* Eaglebit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eaglebit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B0FE7131F9CA165008A3513 /* Eaglebit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eaglebit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0FE7161F9CA165008A3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B0FE71D1F9CA165008A3513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0FE7221F9CA165008A3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +55,9 @@
 		4B0FE7291F9CA1CE008A3513 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4B0FE72D1F9CA684008A3513 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4BA3DABD1F9CEA1C0096C540 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eaglebit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE77D5A1FA9CCB200A44E15 /* Eaglebit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Eaglebit.h; sourceTree = "<group>"; };
+		4BE77D5B1FA9CCB200A44E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEE8DD71F9F683800671FFB /* Eaglebit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eaglebit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,6 +67,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0FE72E1F9CA684008A3513 /* MapKit.framework in Frameworks */,
+				4BE77D5F1FA9CCB200A44E15 /* Eaglebit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE77D541FA9CCB200A44E15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4B0FE7151F9CA165008A3513 /* Eaglebit */,
+				4BE77D591FA9CCB200A44E15 /* Eaglebit */,
 				4B0FE7141F9CA165008A3513 /* Products */,
 				4B0FE72C1F9CA684008A3513 /* Frameworks */,
 			);
@@ -54,7 +94,8 @@
 		4B0FE7141F9CA165008A3513 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B0FE7131F9CA165008A3513 /* Eaglebit.app */,
+				4B0FE7131F9CA165008A3513 /* Eaglebit Example.app */,
+				4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,16 +155,56 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4BE77D591FA9CCB200A44E15 /* Eaglebit */ = {
+			isa = PBXGroup;
+			children = (
+				4BE77D5A1FA9CCB200A44E15 /* Eaglebit.h */,
+				4BE77D5B1FA9CCB200A44E15 /* Info.plist */,
+			);
+			path = Eaglebit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4BE77D551FA9CCB200A44E15 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE77D5C1FA9CCB200A44E15 /* Eaglebit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		4B0FE7121F9CA165008A3513 /* Eaglebit */ = {
+		4B0FE7121F9CA165008A3513 /* Eaglebit Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B0FE7251F9CA165008A3513 /* Build configuration list for PBXNativeTarget "Eaglebit" */;
+			buildConfigurationList = 4B0FE7251F9CA165008A3513 /* Build configuration list for PBXNativeTarget "Eaglebit Example" */;
 			buildPhases = (
 				4B0FE70F1F9CA165008A3513 /* Sources */,
 				4B0FE7101F9CA165008A3513 /* Frameworks */,
 				4B0FE7111F9CA165008A3513 /* Resources */,
+				4BE77D641FA9CCB200A44E15 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BE77D5E1FA9CCB200A44E15 /* PBXTargetDependency */,
+			);
+			name = "Eaglebit Example";
+			productName = Eaglebit;
+			productReference = 4B0FE7131F9CA165008A3513 /* Eaglebit Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BE77D571FA9CCB200A44E15 /* Eaglebit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "Eaglebit" */;
+			buildPhases = (
+				4BE77D531FA9CCB200A44E15 /* Sources */,
+				4BE77D541FA9CCB200A44E15 /* Frameworks */,
+				4BE77D551FA9CCB200A44E15 /* Headers */,
+				4BE77D561FA9CCB200A44E15 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -131,8 +212,8 @@
 			);
 			name = Eaglebit;
 			productName = Eaglebit;
-			productReference = 4B0FE7131F9CA165008A3513 /* Eaglebit.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 4BE77D581FA9CCB200A44E15 /* Eaglebit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -156,6 +237,10 @@
 							};
 						};
 					};
+					4BE77D571FA9CCB200A44E15 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 4B0FE70E1F9CA165008A3513 /* Build configuration list for PBXProject "Eaglebit" */;
@@ -171,7 +256,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B0FE7121F9CA165008A3513 /* Eaglebit */,
+				4B0FE7121F9CA165008A3513 /* Eaglebit Example */,
+				4BE77D571FA9CCB200A44E15 /* Eaglebit */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +270,13 @@
 				4B0FE71E1F9CA165008A3513 /* Assets.xcassets in Resources */,
 				4B0F758D1F9D07E500BD1F3D /* InfoPlist.strings in Resources */,
 				4B0FE72A1F9CA1CE008A3513 /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BE77D561FA9CCB200A44E15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +294,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4BE77D531FA9CCB200A44E15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE77D651FA9CCDF00A44E15 /* Eaglebit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BE77D5E1FA9CCB200A44E15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BE77D571FA9CCB200A44E15 /* Eaglebit */;
+			targetProxy = 4BE77D5D1FA9CCB200A44E15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B0FE7231F9CA165008A3513 /* Debug */ = {
@@ -314,12 +423,13 @@
 		4B0FE7261F9CA165008A3513 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6L68FW2WH;
 				INFOPLIST_FILE = Eaglebit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,15 +439,64 @@
 		4B0FE7271F9CA165008A3513 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E6L68FW2WH;
 				INFOPLIST_FILE = Eaglebit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4BE77D621FA9CCB200A44E15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E6L68FW2WH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Eaglebit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BE77D631FA9CCB200A44E15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = E6L68FW2WH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Eaglebit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mhergon.eaglebit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -353,11 +512,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B0FE7251F9CA165008A3513 /* Build configuration list for PBXNativeTarget "Eaglebit" */ = {
+		4B0FE7251F9CA165008A3513 /* Build configuration list for PBXNativeTarget "Eaglebit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B0FE7261F9CA165008A3513 /* Debug */,
 				4B0FE7271F9CA165008A3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BE77D611FA9CCB200A44E15 /* Build configuration list for PBXNativeTarget "Eaglebit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BE77D621FA9CCB200A44E15 /* Debug */,
+				4BE77D631FA9CCB200A44E15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
