@@ -53,7 +53,7 @@ $(SRCROOT)/Carthage/Build/iOS/EagleBit.framework
 
 ### Manually installation
 
-[Download](https://github.com/mhergon/EagleBit/raw/master/EagleBit/EagleBit/EagleBit.swift) (right-click) and add to your project.
+[Download](https://github.com/mhergon/EagleBit/raw/master/EagleBit.swift) (right-click) and add to your project.
 
 ### Requirements
 
