@@ -79,7 +79,7 @@ public class EagleBit: NSObject {
 }
 
 // MARK: - Public use methods
-extension EagleBit {
+internal extension EagleBit {
     
     // MARk: - Public methods
     
