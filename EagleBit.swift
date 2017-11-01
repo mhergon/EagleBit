@@ -18,10 +18,10 @@ enum EagleAuthorization {
 }
 
 /// Global access
-let Eagle = EagleBit()
+public let Eagle = EagleBit()
 
 /// Main
-class EagleBit: NSObject {
+public class EagleBit: NSObject {
 
     // MARK: - Public properties
     
@@ -207,7 +207,7 @@ fileprivate extension EagleBit {
 extension EagleBit: CLLocationManagerDelegate {
     
     // MARK: - Authorization related
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         /// Send status to all suscribers.
         for block in authorizationBlocks { block?(status) }
@@ -227,7 +227,7 @@ extension EagleBit: CLLocationManagerDelegate {
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
         /// Send error (check authorization and, plist properties, etc) to all suscribers.
         for block in locationBlocks { block(nil, error) }
@@ -249,7 +249,7 @@ extension EagleBit: CLLocationManagerDelegate {
     }
     
     // MARK: - Region monitoring related
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+    public func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         
         /// Re-start location updates
         locationManager.startUpdatingLocation()
