@@ -2,7 +2,6 @@
 <img src="https://github.com/mhergon/EagleBit/raw/master/assets/eaglebit_logo.png" alt="EagleBit" title="Logo" height=300>
 </p>
 
-![cocoapods](https://img.shields.io/cocoapods/at/EagleBit.svg)
 ![cocoapods](https://img.shields.io/cocoapods/v/EagleBit.svg?style=flat)
 ![carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 ![issues](https://img.shields.io/github/issues/mhergon/EagleBit.svg)
