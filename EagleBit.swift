@@ -12,7 +12,7 @@ import CoreLocation
 ///
 /// - inUse: Only when app is in foreground
 /// - always: Always (include in background)
-enum EagleAuthorization {
+public enum EagleAuthorization {
     case inUse
     case always
 }
@@ -26,20 +26,20 @@ public class EagleBit: NSObject {
     // MARK: - Public properties
     
     /// Authorization status closure
-    typealias EagleAuthorizationStatus = (CLAuthorizationStatus) -> Swift.Void
+    public typealias EagleAuthorizationStatus = (CLAuthorizationStatus) -> Swift.Void
     
     /// Location closure
-    typealias EagleLocation = (CLLocation?, Error?) -> Swift.Void
+    public typealias EagleLocation = (CLLocation?, Error?) -> Swift.Void
     
     /// The minimum distance (measured in meters) an Eagle must move horizontally before an update event is generated.
-    var distanceFilter: CLLocationDistance = 10.0 {
+    public var distanceFilter: CLLocationDistance = 10.0 {
         didSet {
             locationManager.distanceFilter = distanceFilter
         }
     }
     
     /// Show/hide background location indicator
-    var showsBackgroundLocationIndicator = false {
+    public var showsBackgroundLocationIndicator = false {
         didSet {
             if #available(iOS 11.0, *) { locationManager.showsBackgroundLocationIndicator = showsBackgroundLocationIndicator }
         }
@@ -79,7 +79,7 @@ public class EagleBit: NSObject {
 }
 
 // MARK: - Public use methods
-internal extension EagleBit {
+public extension EagleBit {
     
     // MARk: - Public methods
     
