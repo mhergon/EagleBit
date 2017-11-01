@@ -21,7 +21,7 @@ enum EagleAuthorization {
 let Eagle = EagleBit()
 
 /// Main
-class EagleBit: NSObject {
+public class EagleBit: NSObject {
 
     // MARK: - Public properties
     
@@ -79,7 +79,7 @@ class EagleBit: NSObject {
 }
 
 // MARK: - Public use methods
-extension EagleBit {
+public extension EagleBit {
     
     // MARk: - Public methods
     
