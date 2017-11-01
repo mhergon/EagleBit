@@ -15,7 +15,7 @@ Is able to stop location updates when is not necessary and restart when the user
 ## Capabilities
 
 ### Current features
-- Very low battery consumption (around 20%).
+- Very low battery consumption **(around 20%)**.
 - Stop/restart location updates automatically.
 - No config needed, defaults values are the best.
 
