@@ -18,10 +18,10 @@ enum EagleAuthorization {
 }
 
 /// Global access
-let Eagle = Eaglebit()
+let Eagle = EagleBit()
 
 /// Main
-class Eaglebit: NSObject {
+class EagleBit: NSObject {
 
     // MARK: - Public properties
     
@@ -79,7 +79,7 @@ class Eaglebit: NSObject {
 }
 
 // MARK: - Public use methods
-extension Eaglebit {
+extension EagleBit {
     
     // MARk: - Public methods
     
@@ -146,7 +146,7 @@ extension Eaglebit {
 }
 
 // MARK: - Private methods
-fileprivate extension Eaglebit {
+fileprivate extension EagleBit {
     
     /// Create regions for resume paused location updates.
     ///
@@ -204,7 +204,7 @@ fileprivate extension Eaglebit {
 }
 
 // MARK: - CLLocationManagerDelegate
-extension Eaglebit: CLLocationManagerDelegate {
+extension EagleBit: CLLocationManagerDelegate {
     
     // MARK: - Authorization related
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
