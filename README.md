@@ -70,7 +70,7 @@ Authorize app to get location updates:
 ```swift
 Eagle.authorize(level: .always) { (status) in
     
-    // Location updates authorize status
+    // Authorization status
     
 }
 ```
