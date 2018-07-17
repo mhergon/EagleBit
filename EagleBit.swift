@@ -38,6 +38,13 @@ public class EagleBit: NSObject {
         }
     }
     
+    /// Desired accuracy
+    public var desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyHundredMeters {
+        didSet {
+            locationManager.desiredAccuracy = desiredAccuracy
+        }
+    }
+    
     /// Show/hide background location indicator
     public var showsBackgroundLocationIndicator = false {
         didSet {
@@ -96,8 +103,10 @@ public extension EagleBit {
         switch level {
         case .inUse:
             locationManager.requestWhenInUseAuthorization()
+            
         case .always:
             locationManager.requestAlwaysAuthorization()
+            
         }
         
     }
